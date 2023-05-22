@@ -14,10 +14,20 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
     }
 
-    private fun checkFirstNumber(tvCalcResult: TextView): Boolean {
+    private fun checkNumberIsZero(tvCalcResult: TextView): Boolean {
         if (tvCalcResult.text.toString() != "0") return false
         return true
+    }
+
+    private fun addNumberTextView(tvCalcResult: TextView, numberButton: Button): TextView {
+        tvCalcResult.text = buildString {
+            append(tvCalcResult.text.toString())
+            append(numberButton.text.toString())
+        }
+
+        return tvCalcResult
     }
 }
