@@ -7,6 +7,10 @@ android {
     namespace 'com.websarva.wings.android.calcapp'
     compileSdk 33
 
+    buildFeatures {
+        viewBinding true
+    }
+
     defaultConfig {
         applicationId "com.websarva.wings.android.calcapp"
         minSdk 24
